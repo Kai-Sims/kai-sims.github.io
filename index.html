@@ -1,20 +1,454 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Kai Sims Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kai Sims | Mechanical Engineer</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel-2: #1f2937;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --border: #334155;
+      --max-width: 1050px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0b1120 0%, #111827 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.8);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 5.5rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 4.3rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-card {
+      background: rgba(17, 24, 39, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1.2rem 0 1.5rem;
+    }
+
+    .pill {
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.88rem;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #08111f;
+      border: none;
+    }
+
+    section {
+      padding: 2.5rem 0;
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(17, 24, 39, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.4rem;
+    }
+
+    .card h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem 1.2rem;
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      margin-bottom: 1rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-tags span {
+      font-size: 0.82rem;
+      color: var(--accent-2);
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.22);
+      border-radius: 999px;
+      padding: 0.3rem 0.65rem;
+    }
+
+    .resume-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Kai Sims</h1>
-    <p>Mechanical Engineer | Manufacturing | Robotics</p>
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">Kai Sims</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>Endoscopic Clip Applier</li>
-        <li>Nano 3D Printer Manufacturing System</li>
-        <li>Racecar Suspension Design</li>
-    </ul>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Mechanical Engineer focused on hardware, manufacturing, and system integration.</h1>
+        <p>
+          I design, build, and validate physical systems across medical devices,
+          automated manufacturing, and high-performance mechanical structures.
+          I enjoy fast-paced engineering environments where analysis, prototyping,
+          and real-world testing drive design decisions.
+        </p>
 
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
+        <div class="pill-row">
+          <span class="pill">Mechanical Design</span>
+          <span class="pill">Manufacturing</span>
+          <span class="pill">Automation</span>
+          <span class="pill">Prototyping</span>
+          <span class="pill">System Integration</span>
+        </div>
+
+        <div class="btn-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Quick Summary</h3>
+        <p>
+          M.S. Mechanical Engineering candidate at UC Berkeley with hands-on experience
+          in precision hardware, custom fixtures, prototype development, and automated
+          manufacturing systems.
+        </p>
+        <div class="pill-row">
+          <span class="pill">UC Berkeley</span>
+          <span class="pill">SolidWorks</span>
+          <span class="pill">Python</span>
+          <span class="pill">FEA</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">
+          I like building real hardware and improving designs through testing, iteration, and engineering rigor.
+        </p>
+
+        <div class="about">
+          <div class="card">
+            <h3>Background</h3>
+            <p>
+              I’m currently pursuing my Master’s in Mechanical Engineering at UC Berkeley.
+              My experience includes developing an automated manufacturing process for a nano-scale
+              3D printer, leading the design of an endoscopic clip applier compatible with the
+              Da Vinci surgical robot, and designing structural racecar components with validation
+              through fabrication and testing.
+            </p>
+          </div>
+
+          <div class="card" id="skills">
+            <h3>Core Skills</h3>
+            <ul class="skills-list">
+              <li>SolidWorks / CAD</li>
+              <li>Mechanical Design</li>
+              <li>Tolerance Analysis</li>
+              <li>GD&amp;T Fundamentals</li>
+              <li>Prototype Fabrication</li>
+              <li>Python Automation</li>
+              <li>Manufacturing Processes</li>
+              <li>System Integration</li>
+              <li>FEA / Structural Analysis</li>
+              <li>Root Cause Analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-subtitle">
+          A few examples of the systems I’ve designed, built, and tested.
+        </p>
+
+        <div class="projects-grid">
+          <div class="card project-card">
+            <h3>Autonomous Nano-Scale 3D Printer Manufacturing Line</h3>
+            <div class="project-tags">
+              <span>Automation</span>
+              <span>Precision Fixtures</span>
+              <span>Python</span>
+            </div>
+            <p>
+              Designed precision mechanical fixtures, fluid handling assemblies, and motion
+              subsystems for automated ink cartridge filling. Integrated sensors and stepper-driven
+              hardware with Python-based sequencing and data collection to improve repeatability.
+            </p>
+          </div>
+
+          <div class="card project-card">
+            <h3>Endoscopic Clip Applier</h3>
+            <div class="project-tags">
+              <span>Medical Device</span>
+              <span>Mechanism Design</span>
+              <span>Prototyping</span>
+            </div>
+            <p>
+              Led a team of four engineers in developing an endoscopic clip applier compatible
+              with the Da Vinci surgical robot. Owned CAD, tolerance stack-ups, prototyping,
+              and design refinement through repeated testing.
+            </p>
+          </div>
+
+          <div class="card project-card">
+            <h3>Racecar Suspension and Spaceframe</h3>
+            <div class="project-tags">
+              <span>Structures</span>
+              <span>FEA</span>
+              <span>Fabrication</span>
+            </div>
+            <p>
+              Designed and validated racecar structural components through CAD, FEA, and physical
+              prototype testing. Improved torsional stiffness and load paths through redesign
+              informed by real-world fabrication and test feedback.
+            </p>
+          </div>
+
+          <div class="card project-card">
+            <h3>Programmable Macro Controller</h3>
+            <div class="project-tags">
+              <span>Embedded Hardware</span>
+              <span>Soldering</span>
+              <span>User Interface</span>
+            </div>
+            <p>
+              Built a programmable macro controller with custom hardware and Python-based macro
+              integration to reduce repetitive computer workflows into single-button actions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <p class="section-subtitle">
+          Download my resume or reach out directly if you’d like to discuss opportunities.
+        </p>
+
+        <div class="card resume-box">
+          <div>
+            <h3>Kai Sims Resume</h3>
+            <p>
+              Add your PDF resume file to this repository and link it here.
+            </p>
+          </div>
+          <a class="btn primary" href="Kai_Sims_Resume.pdf" target="_blank">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">
+          I’m interested in roles involving hardware systems, manufacturing, robotics, and advanced mechanical design.
+        </p>
+
+        <div class="card">
+          <p><strong>Email:</strong> your-email@example.com</p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com" target="_blank">Add your LinkedIn link here</a></p>
+          <p><strong>Location:</strong> Berkeley / Bay Area</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Designed and built by Kai Sims</p>
+    </div>
+  </footer>
 </body>
 </html>
