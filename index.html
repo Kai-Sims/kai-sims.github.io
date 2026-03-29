@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kai Sims | Mechanical Engineer</title>
+  <meta
+    name="description"
+    content="Portfolio of Kai Sims, a mechanical engineer focused on design, manufacturing, prototyping, automation, and high-performance hardware systems."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,6 +16,7 @@
       <a class="brand" href="index.html">Kai Sims</a>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
@@ -19,17 +24,32 @@
   </nav>
 
   <header class="hero">
-    <div class="container">
-      <p class="eyebrow">Mechanical Engineer</p>
-      <h1>Designing and building hardware systems that perform in the real world.</h1>
-      <p class="hero-text">
-        I’m a mechanical engineer at UC Berkeley focused on precision mechanical design,
-        manufacturing systems, prototyping, and system integration. My work spans
-        medical devices, automated manufacturing, and high-performance structural systems.
-      </p>
-      <div class="hero-buttons">
-        <a class="button primary" href="#projects">View Projects</a>
-        <a class="button" href="#contact">Contact</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Mechanical Engineer • Design • Manufacturing • Prototyping</p>
+        <h1>Building mechanical systems that are precise, manufacturable, and proven in hardware.</h1>
+        <p class="hero-text">
+          I’m a mechanical engineer at UC Berkeley focused on precision mechanical design,
+          automation, manufacturing systems, prototyping, and structural validation.
+          My work spans medical devices, robotic-compatible mechanisms, autonomous manufacturing,
+          and high-performance vehicle structures.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button" href="resume.pdf" target="_blank">Download Resume</a>
+          <a class="button" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <p class="hero-panel-label">Current Focus</p>
+        <ul class="hero-list">
+          <li>Precision mechanical design</li>
+          <li>Automation and process development</li>
+          <li>Fixture design and prototyping</li>
+          <li>Structures, mechanisms, and testing</li>
+        </ul>
       </div>
     </div>
   </header>
@@ -38,23 +58,76 @@
     <div class="container narrow">
       <h2>About</h2>
       <p>
-        I enjoy solving engineering problems that require both analytical thinking and hands-on execution.
-        My experience includes developing an automated manufacturing process for a nano-scale 3D printer,
-        leading the design of an endoscopic clip applier compatible with the Da Vinci surgical robot,
-        and designing and validating racecar structures through CAD, FEA, fabrication, and testing.
+        I enjoy solving engineering problems that require analytical thinking, fast iteration,
+        and hands-on execution. My experience includes developing an autonomous manufacturing
+        process for nano-scale 3D printer ink cartridges, leading the design of an endoscopic
+        clip applier compatible with the Da Vinci surgical robot, and designing racecar
+        suspension and structural systems through CAD, FEA, fabrication, and testing.
       </p>
       <p>
-        I’m especially interested in fast-paced environments where engineers own systems from concept
-        through prototyping, testing, and iteration.
+        I’m especially interested in roles where engineers own hardware from concept through
+        prototyping, validation, and deployment.
       </p>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+
+      <div class="experience-list">
+        <div class="experience-item">
+          <div class="experience-top">
+            <h3>Design Engineer — Nano-Scale 3D Printer Manufacturing Project</h3>
+            <p class="experience-meta">UC Berkeley • 2025 – Present</p>
+          </div>
+          <p>
+            Designing an autonomous manufacturing process for filling nano-printer ink cartridges,
+            including fixture design, fluid handling, hardware integration, and Python-based process automation.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-top">
+            <h3>Design Lead — Endoscopic Clip Applier</h3>
+            <p class="experience-meta">UC Berkeley • 2024 – 2025</p>
+          </div>
+          <p>
+            Led a four-person engineering team developing a robotic-compatible surgical mechanism,
+            driving concept development, CAD, prototyping, design refinement, and testing.
+          </p>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-top">
+            <h3>Racecar Design — Suspension and Spaceframe</h3>
+            <p class="experience-meta">Student Engineering Project • 2023 – Present</p>
+          </div>
+          <p>
+            Designed suspension geometry and structural components using load analysis, CAD,
+            fabrication planning, FEA, and physical validation of torsional stiffness behavior.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="projects" class="section">
     <div class="container">
-      <h2>Selected Projects</h2>
+      <div class="section-heading">
+        <div>
+          <h2>Selected Projects</h2>
+          <p class="section-subtext">
+            A selection of engineering work spanning automation, mechanisms, structures, and embedded hardware.
+          </p>
+        </div>
+      </div>
+
       <div class="project-grid">
         <a class="project-card" href="projects/nano-printer.html">
+          <div class="project-image">
+            <img src="images/nano-printer.jpg" alt="Nano-scale 3D printer manufacturing project" />
+          </div>
           <div class="project-card-content">
             <p class="project-type">Automation / Manufacturing</p>
             <h3>Autonomous Nano-Scale 3D Printer Manufacturing Line</h3>
@@ -65,6 +138,9 @@
         </a>
 
         <a class="project-card" href="projects/clip-applier.html">
+          <div class="project-image">
+            <img src="images/clip-applier.jpg" alt="Endoscopic clip applier project" />
+          </div>
           <div class="project-card-content">
             <p class="project-type">Medical Device / Mechanism Design</p>
             <h3>Endoscopic Clip Applier</h3>
@@ -75,6 +151,9 @@
         </a>
 
         <a class="project-card" href="projects/racecar.html">
+          <div class="project-image">
+            <img src="images/racecar.jpg" alt="Racecar suspension and spaceframe project" />
+          </div>
           <div class="project-card-content">
             <p class="project-type">Structures / Vehicle Systems</p>
             <h3>Racecar Suspension and Spaceframe</h3>
@@ -85,6 +164,9 @@
         </a>
 
         <a class="project-card" href="projects/macro-controller.html">
+          <div class="project-image">
+            <img src="images/macro-controller.jpg" alt="Programmable macro controller project" />
+          </div>
           <div class="project-card-content">
             <p class="project-type">Embedded Hardware / Personal Project</p>
             <h3>Programmable Macro Controller</h3>
@@ -101,7 +183,12 @@
     <div class="container narrow">
       <h2>Contact</h2>
       <p>Email: kaijpsims@gmail.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kai-j-sims/" target="_blank">https://www.linkedin.com/in/kai-j-sims/</a></p>
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/kai-j-sims/" target="_blank">
+          https://www.linkedin.com/in/kai-j-sims
+        </a>
+      </p>
       <p>Location: Carlsbad / Bay Area</p>
     </div>
   </section>
