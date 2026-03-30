@@ -385,3 +385,19 @@ a:hover {
     font-size: clamp(2.2rem, 9vw, 3.2rem);
   }
 }
+
+.project-subimage {
+  margin: 1rem 0 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0c1524;
+  box-shadow: var(--shadow);
+}
+
+.project-subimage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
