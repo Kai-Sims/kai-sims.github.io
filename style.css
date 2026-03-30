@@ -401,3 +401,28 @@ a:hover {
   height: auto;
   object-fit: cover;
 }
+
+.top-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.external-link-button {
+  display: inline-block;
+  padding: 0.72rem 1rem;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.external-link-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+}
