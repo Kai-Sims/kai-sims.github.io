@@ -8,42 +8,119 @@
 </head>
 <body>
   <div class="container project-page narrow">
-    <a class="back-link" href="../index.html">← Back to portfolio</a>
+
+    <div class="top-links">
+      <a class="back-link" href="../index.html">← Back to portfolio</a>
+      <a class="external-link-button" href="https://sites.google.com/eng.ucsd.edu/mae156b-2025winter-team05/home" target="_blank" rel="noopener noreferrer">
+        Visit Website ↗
+      </a>
+    </div>
 
     <h1>Endoscopic Clip Applier</h1>
     <p class="meta">Design Lead | Berkeley, CA | 2024 – 2025</p>
 
     <p>
-      I led the design and development of an endoscopic clip applier intended to interface
-      with the Da Vinci surgical robot. The project required precise mechanical actuation,
-      constrained packaging, and repeated prototype iteration to achieve reliable clip deployment.
+      I led the design and development of a robotically assisted multiload endoscopic clip
+      applier intended to interface with Intuitive Surgical’s Da Vinci system. The project
+      required precise mechanical actuation, constrained packaging, compact internal integration,
+      and repeated prototype iteration to achieve reliable clip loading and deployment.
     </p>
+
+    <div class="project-section">
+      <h2>Background</h2>
+      <p>
+        During cardiothoracic procedures such as heart and lung surgery, surgeons frequently
+        use robot-assisted systems like Intuitive Surgical’s Da Vinci Xi. This system uses
+        detachable robotic arms to provide precise motion control, allowing surgeons to operate
+        within the patient with a high degree of accuracy.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Problem Definition</h2>
+      <p>
+        During surgery, an endoscopic clip applier is used to limit blood flow in vessels.
+        In a conventional workflow, the applier is manually loaded with a clip in its jaws,
+        inserted into the body through a surgical port, and fired once positioned correctly.
+      </p>
+      <p>
+        After deployment, a surgical assistant must remove the instrument, manually attach
+        a new clip from a cartridge, and reinsert it through the port before the procedure
+        can continue. This process introduces inefficiency and becomes especially problematic
+        in time-sensitive situations such as internal bleeding.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Objective</h2>
+      <p>
+        The goal of this project was to design a robotically assisted multiload clip applier
+        that could integrate with the existing Da Vinci system used at UCSD Health. The device
+        needed to store multiple titanium clips while remaining straightforward and intuitive
+        in operation during surgical use.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Primary Requirements</h2>
+      <ul>
+        <li>Compatible with the existing Da Vinci system.</li>
+        <li>Automatic reloading within the patient.</li>
+        <li>Minimum clip capacity of three titanium clips.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Secondary Requirements</h2>
+      <ul>
+        <li>Ideally fits through an 8 mm diameter shaft, with a maximum of 15 mm.</li>
+        <li>Uses biocompatible and steam-sterilizable materials.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Final Design Overview</h2>
+      <p>
+        The multiload clip applier consists of six key components: a clip cartridge, a clip
+        pusher plate, modified clip applier jaws, a jaw closer plate, a clip cartridge holder,
+        and an outer shell. These components were compactly arranged within the shell to reduce
+        the risk of tissue pinching from moving internal parts.
+      </p>
+      <p>
+        The core mechanism uses a cable-driven system to align and actuate the two plates with
+        precise motion. The cable loops over upper extrusions on the cartridge holder to maintain
+        secure routing. When one side of the cable is pulled, a clip is advanced from the cartridge
+        into the jaws. Pulling the opposite side closes the jaws, firing and compressing the clip.
+        This cycle can then be repeated as needed during the procedure, reducing interruptions and
+        streamlining clip application.
+      </p>
+    </div>
 
     <div class="project-section">
       <h2>What I worked on</h2>
       <ul>
         <li>Led a team of four undergraduate engineers through concept development, CAD design, prototyping, and testing.</li>
-        <li>Designed custom machined parts and mechanical interfaces for the clip deployment mechanism.</li>
-        <li>Managed tolerance stack-ups and mechanical alignment requirements for reliable actuation.</li>
+        <li>Designed custom machined parts and mechanical interfaces for the multiload clip deployment mechanism.</li>
+        <li>Managed tolerance stack-ups, packaging constraints, and alignment requirements for reliable actuation.</li>
         <li>Coordinated prototype builds and used testing feedback to refine the design.</li>
       </ul>
     </div>
 
     <div class="project-section">
-      <h2>Key engineering challenges</h2>
+      <h2>Key Engineering Challenges</h2>
       <ul>
-        <li>Packaging a functional mechanism within a constrained robotic surgical form factor.</li>
-        <li>Maintaining consistent actuation and alignment across iterations.</li>
-        <li>Balancing manufacturability with precision mechanical performance.</li>
+        <li>Packaging a functional multiload mechanism within a highly constrained robotic surgical form factor.</li>
+        <li>Maintaining smooth cable-driven motion and alignment across repeated loading and firing cycles.</li>
+        <li>Balancing compactness, manufacturability, and reliable clip deployment performance.</li>
       </ul>
     </div>
 
     <div class="project-section">
       <h2>What I learned</h2>
       <ul>
-        <li>How to lead a small engineering team through an end-to-end hardware project.</li>
-        <li>How to refine mechanisms through rapid prototyping and structured testing.</li>
-        <li>How precision interfaces and tolerance decisions directly affect system reliability.</li>
+        <li>How to lead a small engineering team through an end-to-end hardware design project.</li>
+        <li>How to refine mechanisms through structured prototyping and repeated testing.</li>
+        <li>How packaging, tolerance decisions, and internal interfaces directly affect system reliability.</li>
       </ul>
     </div>
   </div>
