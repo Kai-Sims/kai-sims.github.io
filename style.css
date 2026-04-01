@@ -476,6 +476,137 @@ a:hover {
 }
 
 /* Responsive */
+/* Education */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.25rem;
+}
+
+.education-card {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(16, 27, 45, 0.96), rgba(12, 21, 35, 0.96));
+  box-shadow: var(--shadow);
+}
+
+.education-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.12rem;
+}
+
+.education-degree {
+  margin: 0 0 0.35rem;
+  color: var(--text);
+}
+
+.education-meta {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+/* Skills */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.25rem;
+}
+
+.skill-card {
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(16, 27, 45, 0.96), rgba(12, 21, 35, 0.96));
+  box-shadow: var(--shadow);
+}
+
+.skill-card h3 {
+  margin: 0 0 0.55rem;
+  color: var(--accent);
+  font-size: 1.08rem;
+}
+
+.skill-card p {
+  margin: 0;
+}
+
+/* Contact */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.25rem;
+}
+
+.contact-card {
+  display: block;
+  padding: 1.2rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(16, 27, 45, 0.96), rgba(12, 21, 35, 0.96));
+  box-shadow: var(--shadow);
+  color: var(--text);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.contact-card h3 {
+  margin: 0 0 0.45rem;
+  color: var(--accent);
+  font-size: 1.08rem;
+}
+
+.contact-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 1.5rem 0 2rem;
+  background: rgba(9, 17, 29, 0.9);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(48, 69, 98, 0.35);
+  padding-top: 1.5rem;
+}
+
+.footer-inner p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--muted);
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
 
 @media (max-width: 900px) {
   .hero-about {
@@ -500,6 +631,12 @@ a:hover {
   .experience-columns {
     grid-template-columns: 1fr;
   }
+}
+
+.education-grid,
+.skills-grid,
+.contact-grid {
+  grid-template-columns: 1fr;
 }
 
 @media (max-width: 700px) {
