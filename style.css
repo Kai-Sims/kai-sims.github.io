@@ -672,3 +672,18 @@ a:hover {
     font-size: clamp(2.2rem, 9vw, 3.2rem);
   }
 }
+
+.project-image-caption {
+  margin: 0;
+  padding: 0.75rem 1.2rem 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+}
+
+#looking-for p {
+  font-size: 1.04rem;
+}
+.project-section p strong {
+  color: var(--text);
+}
