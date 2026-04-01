@@ -375,6 +375,22 @@ a:hover {
 
 /* Images - no cropping */
 
+.project-hero-image {
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0c1524;
+  box-shadow: var(--shadow);
+}
+
+.project-hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #0c1524;
+}
 .project-image,
 .project-subimage,
 .component-image {
