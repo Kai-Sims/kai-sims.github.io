@@ -447,7 +447,22 @@ a:hover {
   object-fit: contain;
   background: #0c1524;
 }
+.project-subimage-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0 1.15rem;
+}
 
+.project-subimage.half {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .project-subimage-row {
+    grid-template-columns: 1fr;
+  }
+}
 /* Clip applier components */
 
 .component-grid {
