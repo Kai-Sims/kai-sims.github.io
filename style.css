@@ -702,3 +702,40 @@ a:hover {
 .project-section p strong {
   color: var(--text);
 }
+.project-subimage-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0 1.15rem;
+}
+
+.project-subimage.half {
+  margin: 0;
+}
+
+.project-subimage-row.three-up {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project-subimage.third {
+  margin: 0;
+}
+
+.subimage-caption {
+  margin: 0;
+  padding: 0.75rem 1rem 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 900px) {
+  .project-subimage-row.three-up {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-subimage-row {
+    grid-template-columns: 1fr;
+  }
+}
