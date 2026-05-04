@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach NOVA | Kai Sims</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="container project-page narrow">
+    <a class="back-link" href="../index.html">← Back to portfolio</a>
+
+    <div class="project-hero-image">
+      <img src="../images/coach-nova.jpg" alt="Coach NOVA AI assistive coaching system preview image" />
+    </div>
+
+    <h1>Coach NOVA — AI Assistive Coaching System for Strength Athletes</h1>
+    <p class="meta">Embedded Systems / AI / Human Performance</p>
+
+    <p>
+      Coach NOVA is an AI-powered coaching system designed to provide strength athletes with
+      real-time feedback and post-session analysis through a non-intrusive sensing system.
+      By combining embedded hardware with an AI-driven interface, the system delivers actionable
+      insights that help athletes improve form, manage fatigue, and optimize performance over time.
+    </p>
+
+    <div class="project-section">
+      <h2>Tools / Methods</h2>
+      <p>
+        ESP32-C3, IMU sensing, embedded hardware integration, battery-powered electronics,
+        wireless communication, signal collection, motion analysis, AI-assisted feedback,
+        and user-centered system design.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Overview</h2>
+      <p>
+        Coach NOVA was developed as an assistive coaching platform for strength athletes who
+        train without direct access to a coach. The system captures motion data during lifts
+        and translates it into feedback that can support immediate adjustments during training
+        as well as longer-term performance analysis after a session is completed.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Purpose</h2>
+      <p>
+        The goal of Coach NOVA is to replace the broken feedback loop in strength training by
+        providing continuous, personalized coaching. In many training environments, athletes
+        either receive delayed feedback or no feedback at all. This system addresses that gap
+        by collecting movement data in real time and converting it into clear, useful guidance.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Target Users</h2>
+      <ul>
+        <li>Competitive and semi-competitive powerlifters</li>
+        <li>Strength athletes training alone</li>
+        <li>Users without consistent access to a coach</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>System Architecture</h2>
+      <p>
+        The system combines embedded sensing hardware with an AI-supported feedback interface.
+        Motion data is captured through an IMU-based device, processed through a microcontroller,
+        and transmitted wirelessly for interpretation and athlete-facing analysis.
+      </p>
+    </div>
+
+    <div class="project-section">
+      <h2>Hardware Components</h2>
+      <ul>
+        <li><strong>ESP32-C3 Microcontroller:</strong> data processing and wireless communication</li>
+        <li><strong>IMU Sensor (LSM6DS3 / LSM6DSOX):</strong> captures acceleration and rotational motion</li>
+        <li><strong>3.7V LiPo Battery:</strong> portable power source</li>
+        <li><strong>3.3V Buck Converter:</strong> voltage regulation</li>
+        <li><strong>TP4056 Charging Module:</strong> battery charging support</li>
+        <li><strong>LED Indicator:</strong> system status feedback</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Project Images</h2>
+
+      <div class="project-subimage-row three-up">
+        <div class="project-subimage third">
+          <img src="../images/coach-nova-1.jpg" alt="Coach NOVA system image 1" />
+          <p class="subimage-caption">System overview or device assembly</p>
+        </div>
+
+        <div class="project-subimage third">
+          <img src="../images/coach-nova-2.jpg" alt="Coach NOVA system image 2" />
+          <p class="subimage-caption">Hardware layout, wiring, or sensor integration</p>
+        </div>
+
+        <div class="project-subimage third">
+          <img src="../images/coach-nova-3.jpg" alt="Coach NOVA system image 3" />
+          <p class="subimage-caption">Interface, data flow, or athlete feedback display</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h2>What I worked on</h2>
+      <ul>
+        <li>Contributed to the development of an embedded sensing system for athlete movement tracking.</li>
+        <li>Integrated hardware components including the microcontroller, IMU, power system, and communication setup.</li>
+        <li>Helped define how sensor data could be translated into useful real-time and post-session feedback.</li>
+        <li>Worked on a system intended to improve the training feedback loop through accessible AI-assisted coaching.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Key Engineering Challenges</h2>
+      <ul>
+        <li>Capturing meaningful movement data using a non-intrusive, athlete-friendly sensing setup.</li>
+        <li>Balancing portability, power management, and reliable wireless communication.</li>
+        <li>Converting raw motion data into feedback that is actionable and easy for athletes to interpret.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>What I learned</h2>
+      <ul>
+        <li>How embedded sensing hardware can be combined with software and AI to create practical user-facing systems.</li>
+        <li>How to think about system design from both the technical and end-user experience perspectives.</li>
+        <li>How motion data collection, processing, and interpretation can support real-time human performance applications.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
