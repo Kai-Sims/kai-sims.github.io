@@ -3,134 +3,222 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coach NOVA | Kai Sims</title>
+  <title>Coach NOVA — Kai Sims</title>
+  <meta name="description" content="An AI-powered coaching system that gives strength athletes real-time feedback and post-session analysis through non-intrusive embedded sensing." />
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e0f11" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Coach NOVA — Kai Sims" />
+  <meta property="og:description" content="An AI-powered coaching system that gives strength athletes real-time feedback and post-session analysis through non-intrusive embedded sensing." />
+  <meta property="og:image" content="https://kai-sims.github.io/images/coach-nova-3.jpg" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
+  <script>
+    document.documentElement.classList.add("js");
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
 </head>
 <body>
-  <div class="container project-page narrow">
-    <a class="back-link" href="../index.html">← Back to portfolio</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="project-hero-image">
-      <img src="../images/coach-nova-3.jpg" alt="Coach NOVA AI assistive coaching system preview image" />
-    </div>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Kai Sims, home">
+        <span class="brand-mark" aria-hidden="true">KS</span>
+        Kai Sims
+      </a>
 
-    <h1>Coach NOVA — AI Assistive Coaching System for Strength Athletes</h1>
-    <p class="meta">Embedded Systems / AI / Human Performance</p>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#contact">Contact</a>
+        <a class="mobile-only" href="../resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      </nav>
 
-    <p>
-      Coach NOVA is an AI-powered coaching system designed to provide strength athletes with
-      real-time feedback and post-session analysis through a non-intrusive sensing system.
-      By combining embedded hardware with an AI-driven interface, the system delivers actionable
-      insights that help athletes improve form, manage fatigue, and optimize performance over time.
-    </p>
-
-    <div class="project-section">
-      <h2>Tools / Methods</h2>
-      <p>
-        ESP32-C3, IMU sensing, embedded hardware integration, battery-powered electronics,
-        wireless communication, signal collection, motion analysis, AI-assisted feedback,
-        and user-centered system design.
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h2>Overview</h2>
-      <p>
-        Coach NOVA was developed as an assistive coaching platform for strength athletes who
-        train without direct access to a coach. The system captures motion data during lifts
-        and translates it into feedback that can support immediate adjustments during training
-        as well as longer-term performance analysis after a session is completed.
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h2>Purpose</h2>
-      <p>
-        The goal of Coach NOVA is to replace the broken feedback loop in strength training by
-        providing continuous, personalized coaching. In many training environments, athletes
-        either receive delayed feedback or no feedback at all. This system addresses that gap
-        by collecting movement data in real time and converting it into clear, useful guidance.
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h2>Target Users</h2>
-      <ul>
-        <li>Competitive and semi-competitive powerlifters</li>
-        <li>Strength athletes training alone</li>
-        <li>Users without consistent access to a coach</li>
-      </ul>
-    </div>
-
-    <div class="project-section">
-      <h2>System Architecture</h2>
-      <p>
-        The system combines embedded sensing hardware with an AI-supported feedback interface.
-        Motion data is captured through an IMU-based device, processed through a microcontroller,
-        and transmitted wirelessly for interpretation and athlete-facing analysis.
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h2>Hardware Components</h2>
-      <ul>
-        <li><strong>ESP32-C3 Microcontroller:</strong> data processing and wireless communication</li>
-        <li><strong>IMU Sensor (LSM6DS3 / LSM6DSOX):</strong> captures acceleration and rotational motion</li>
-        <li><strong>3.7V LiPo Battery:</strong> portable power source</li>
-        <li><strong>3.3V Buck Converter:</strong> voltage regulation</li>
-        <li><strong>TP4056 Charging Module:</strong> battery charging support</li>
-        <li><strong>LED Indicator:</strong> system status feedback</li>
-      </ul>
-    </div>
-
-    <div class="project-section">
-      <h2>Project Images</h2>
-
-      <div class="project-subimage-row three-up">
-        <div class="project-subimage third">
-          <img src="../images/coach-nova-1.jpg" alt="Coach NOVA system image 1" />
-          <p class="subimage-caption">Device Assembly</p>
-        </div>
-
-        <div class="project-subimage third">
-          <img src="../images/coach-nova-2.jpg" alt="Coach NOVA system image 2" />
-          <p class="subimage-caption">Hardware Layout</p>
-        </div>
-
-        <div class="project-subimage third">
-          <img src="../images/coach-nova.jpg" alt="Coach NOVA system image 3" />
-          <p class="subimage-caption">Mounted on Barbell</p>
-        </div>
+      <div class="nav-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+        </button>
+        <a class="button small primary" href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <button class="icon-button menu-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
       </div>
     </div>
+  </header>
 
-    <div class="project-section">
-      <h2>What I worked on</h2>
-      <ul>
-        <li>Contributed to the development of an embedded sensing system for athlete movement tracking.</li>
-        <li>Integrated hardware components including the microcontroller, IMU, power system, and communication setup.</li>
-        <li>Helped define how sensor data could be translated into useful real-time and post-session feedback.</li>
-        <li>Worked on a system intended to improve the training feedback loop through accessible AI-assisted coaching.</li>
-      </ul>
+  <main id="main">
+    <header class="project-header">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html#projects"><span class="arrow">←</span> All projects</a>
+        <span class="label"><span class="accent">03</span>&ensp;Embedded systems · AI · Human performance</span>
+        <h1>Coach NOVA: AI Assistive Coaching System for Strength Athletes</h1>
+        <p class="project-lede">
+          Coach NOVA is an AI-powered coaching system designed to provide strength athletes with real-time feedback and post-session analysis through a non-intrusive sensing system. By combining embedded hardware with an AI-driven interface, the system delivers actionable insights that help athletes improve form, manage fatigue, and optimize performance over time.
+        </p>
+
+        <dl class="title-block">
+          <div>
+            <dt class="label">Discipline</dt>
+            <dd>Embedded systems / AI</dd>
+          </div>
+          <div>
+            <dt class="label">Hardware</dt>
+            <dd>ESP32-C3<span>6-axis IMU</span></dd>
+          </div>
+          <div>
+            <dt class="label">Users</dt>
+            <dd>Strength athletes</dd>
+          </div>
+          <div>
+            <dt class="label">Output</dt>
+            <dd>Real-time &amp; post-session feedback</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <figure class="project-hero container figure photo">
+      <div class="figure-frame"><img src="../images/coach-nova-3.jpg" alt="Coach NOVA sensor mounted on a loaded barbell" width="1619" height="1800" /></div>
+      <figcaption><span class="mono">Fig. 1</span><span>Sensor mounted on the barbell</span></figcaption>
+    </figure>
+
+    <div class="project-layout container">
+      <article class="prose">
+        <section id="overview">
+          <h2><span class="mono">01</span>Overview</h2>
+          <p>Coach NOVA was developed as an assistive coaching platform for strength athletes who train without direct access to a coach. The system captures motion data during lifts and translates it into feedback that can support immediate adjustments during training as well as longer-term performance analysis after a session is completed.</p>
+        </section>
+        <section id="purpose">
+          <h2><span class="mono">02</span>Purpose</h2>
+          <p>The goal of Coach NOVA is to replace the broken feedback loop in strength training by providing continuous, personalized coaching. In many training environments, athletes either receive delayed feedback or no feedback at all. This system addresses that gap by collecting movement data in real time and converting it into clear, useful guidance.</p>
+        </section>
+        <section id="users">
+          <h2><span class="mono">03</span>Target users</h2>
+          <ul>
+            <li>Competitive and semi-competitive powerlifters</li>
+            <li>Strength athletes training alone</li>
+            <li>Users without consistent access to a coach</li>
+          </ul>
+        </section>
+        <section id="architecture">
+          <h2><span class="mono">04</span>System architecture</h2>
+          <p>The system combines embedded sensing hardware with an AI-supported feedback interface. Motion data is captured through an IMU-based device, processed through a microcontroller, and transmitted wirelessly for interpretation and athlete-facing analysis.</p>
+        </section>
+        <section id="hardware">
+          <h2><span class="mono">05</span>Hardware components</h2>
+          <dl class="spec-list">
+            <div><dt class="label">ESP32-C3</dt><dd>Microcontroller <span>· data processing and wireless communication</span></dd></div>
+            <div><dt class="label">LSM6DS3 / DSOX</dt><dd>IMU sensor <span>· captures acceleration and rotational motion</span></dd></div>
+            <div><dt class="label">3.7 V LiPo</dt><dd>Battery <span>· portable power source</span></dd></div>
+            <div><dt class="label">3.3 V buck</dt><dd>Converter <span>· voltage regulation</span></dd></div>
+            <div><dt class="label">TP4056</dt><dd>Charging module <span>· battery charging support</span></dd></div>
+            <div><dt class="label">LED</dt><dd>Indicator <span>· system status feedback</span></dd></div>
+          </dl>
+          <div class="figure-row">
+            <figure class="figure">
+              <div class="figure-frame"><img src="../images/coach-nova-1.jpg" alt="Coach NOVA device worn on the wrist" width="1800" height="1185" loading="lazy" /></div>
+              <figcaption><span class="mono">Fig. 2</span><span>Device assembly</span></figcaption>
+            </figure>
+            <figure class="figure">
+              <div class="figure-frame"><img src="../images/coach-nova-2.jpg" alt="Open enclosure showing battery, IMU, and microcontroller" width="1800" height="1350" loading="lazy" /></div>
+              <figcaption><span class="mono">Fig. 3</span><span>Hardware layout</span></figcaption>
+            </figure>
+          </div>
+          <figure class="figure">
+            <div class="figure-frame"><img src="../images/coach-nova.jpg" alt="Coach NOVA training dashboard interface" width="1800" height="1037" loading="lazy" /></div>
+            <figcaption><span class="mono">Fig. 4</span><span>Athlete-facing app interface</span></figcaption>
+          </figure>
+        </section>
+        <section id="work">
+          <h2><span class="mono">06</span>What I worked on</h2>
+          <ul>
+            <li>Contributed to the development of an embedded sensing system for athlete movement tracking.</li>
+            <li>Integrated hardware components including the microcontroller, IMU, power system, and communication setup.</li>
+            <li>Helped define how sensor data could be translated into useful real-time and post-session feedback.</li>
+            <li>Worked on a system intended to improve the training feedback loop through accessible AI-assisted coaching.</li>
+          </ul>
+        </section>
+        <section id="challenges">
+          <h2><span class="mono">07</span>Key engineering challenges</h2>
+          <ul>
+            <li>Capturing meaningful movement data using a non-intrusive, athlete-friendly sensing setup.</li>
+            <li>Balancing portability, power management, and reliable wireless communication.</li>
+            <li>Converting raw motion data into feedback that is actionable and easy for athletes to interpret.</li>
+          </ul>
+        </section>
+        <section id="learned">
+          <h2><span class="mono">08</span>What I learned</h2>
+          <ul>
+            <li>How embedded sensing hardware can be combined with software and AI to create practical user-facing systems.</li>
+            <li>How to think about system design from both the technical and end-user experience perspectives.</li>
+            <li>How motion data collection, processing, and interpretation can support real-time human performance applications.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="project-aside">
+        <div class="aside-block">
+          <h2>Tools &amp; methods</h2>
+          <ul class="chip-row">
+            <li class="chip">ESP32-C3</li>
+            <li class="chip">IMU sensing</li>
+            <li class="chip">Embedded integration</li>
+            <li class="chip">Battery-powered electronics</li>
+            <li class="chip">Wireless communication</li>
+            <li class="chip">Signal collection</li>
+            <li class="chip">Motion analysis</li>
+            <li class="chip">AI-assisted feedback</li>
+            <li class="chip">User-centered design</li>
+          </ul>
+        </div>
+
+        <nav class="aside-block toc-block" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol class="toc">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#purpose">Purpose</a></li>
+            <li><a href="#users">Target users</a></li>
+            <li><a href="#architecture">System architecture</a></li>
+            <li><a href="#hardware">Hardware components</a></li>
+            <li><a href="#work">What I worked on</a></li>
+            <li><a href="#challenges">Key engineering challenges</a></li>
+            <li><a href="#learned">What I learned</a></li>
+          </ol>
+        </nav>
+      </aside>
     </div>
 
-    <div class="project-section">
-      <h2>Key Engineering Challenges</h2>
-      <ul>
-        <li>Capturing meaningful movement data using a non-intrusive, athlete-friendly sensing setup.</li>
-        <li>Balancing portability, power management, and reliable wireless communication.</li>
-        <li>Converting raw motion data into feedback that is actionable and easy for athletes to interpret.</li>
-      </ul>
-    </div>
+    <a class="next-project" href="racecar.html">
+      <div class="container next-inner">
+        <div>
+          <span class="label">Next project · 04</span>
+          <h2>Racecar Suspension and Spaceframe</h2>
+        </div>
+        <span class="next-arrow" aria-hidden="true">→</span>
+      </div>
+    </a>
+  </main>
 
-    <div class="project-section">
-      <h2>What I learned</h2>
-      <ul>
-        <li>How embedded sensing hardware can be combined with software and AI to create practical user-facing systems.</li>
-        <li>How to think about system design from both the technical and end-user experience perspectives.</li>
-        <li>How motion data collection, processing, and interpretation can support real-time human performance applications.</li>
-      </ul>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Kai Sims</p>
+      <div class="footer-links">
+        <a href="mailto:kaijpsims@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/kai-j-sims/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="../index.html#projects">All projects</a>
+      </div>
     </div>
-  </div>
+  </footer>
+
+  <script src="../main.js" defer></script>
 </body>
 </html>

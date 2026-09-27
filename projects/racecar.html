@@ -3,92 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Racecar Suspension and Spaceframe | Kai Sims</title>
+  <title>Racecar Suspension and Spaceframe — Kai Sims</title>
+  <meta name="description" content="Suspension geometry, upper control arm, and rear spaceframe design using analytical layout, CAD, FEA, fabrication planning, and physical testing." />
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e0f11" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Racecar Suspension and Spaceframe — Kai Sims" />
+  <meta property="og:description" content="Suspension geometry, upper control arm, and rear spaceframe design using analytical layout, CAD, FEA, fabrication planning, and physical testing." />
+  <meta property="og:image" content="https://kai-sims.github.io/images/racecar.jpg" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
+  <script>
+    document.documentElement.classList.add("js");
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
 </head>
 <body>
-  <div class="container project-page narrow">
-    <a class="back-link" href="../index.html">← Back to portfolio</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <h1>Racecar Suspension and Spaceframe</h1>
-    <p class="meta">Mechanical Design | 2023 – Present</p>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Kai Sims, home">
+        <span class="brand-mark" aria-hidden="true">KS</span>
+        Kai Sims
+      </a>
 
-    <p>
-      This project focused on multiple areas of racecar design, including suspension geometry,
-      control arm development, and rear frame structural design. The work combined analytical layout,
-      CAD modeling, fabrication planning, FEA, and physical testing to improve both suspension
-      performance and chassis stiffness.
-    </p>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#contact">Contact</a>
+        <a class="mobile-only" href="../resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      </nav>
 
-    <div class="project-section">
-      <h2>2D Suspension Geometry</h2>
-
-      <div class="project-subimage">
-        <img src="../images/racecar-2d.jpg" alt="2D suspension geometry layout" />
+      <div class="nav-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+        </button>
+        <a class="button small primary" href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <button class="icon-button menu-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
       </div>
-<p>
-  This image represents a simplified 2D suspension model showing the tire, the upper and lower control arm interfaces to the rotor, chassis mounting locations, and shock positions. The model was used to simulate suspension behavior under bump and cornering conditions, allowing evaluation of how the control arms moved and responded throughout wheel travel.
-</p>
-      <ul>
-        <li>Developed the 2D suspension layout to define pickup point locations and overall wheel motion.</li>
-        <li>Used geometric analysis to study how suspension members moved through travel and how those changes affected system behavior.</li>
-        <li>Balanced packaging constraints with desired suspension kinematics.</li>
-        <li>Used the geometry as the foundation for later component and structural design decisions.</li>
-      </ul>
     </div>
+  </header>
 
-    <div class="project-section">
-      <h2>Upper Control Arm</h2>
+  <main id="main">
+    <header class="project-header">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html#projects"><span class="arrow">←</span> All projects</a>
+        <span class="label"><span class="accent">04</span>&ensp;Structures · Vehicle systems</span>
+        <h1>Racecar Suspension and Spaceframe</h1>
+        <p class="project-lede">
+          This project focused on multiple areas of racecar design, including suspension geometry, control arm development, and rear frame structural design. The work combined analytical layout, CAD modeling, fabrication planning, FEA, and physical testing to improve both suspension performance and chassis stiffness.
+        </p>
 
-      <div class="project-subimage">
-        <img src="../images/racecar-uca.jpg" alt="Upper control arm CAD or fabricated component" />
+        <dl class="title-block">
+          <div>
+            <dt class="label">Role</dt>
+            <dd>Mechanical Design</dd>
+          </div>
+          <div>
+            <dt class="label">Timeline</dt>
+            <dd>2023 – Present</dd>
+          </div>
+          <div>
+            <dt class="label">Context</dt>
+            <dd>Student engineering project</dd>
+          </div>
+          <div>
+            <dt class="label">Scope</dt>
+            <dd>Suspension &amp; spaceframe</dd>
+          </div>
+        </dl>
       </div>
+    </header>
 
-      <ul>
-        <li>Designed the upper control arm based on suspension geometry requirements and chassis interface points.</li>
-        <li>Considered load paths, member arrangement, stiffness, and manufacturability during the design process.</li>
-        <li>Modeled the component in CAD and refined the design to support fabrication and assembly.</li>
-        <li>Worked through the tradeoffs between strength, weight, and packaging within the suspension system.</li>
-      </ul>
+    <figure class="project-hero container figure">
+      <div class="figure-frame"><img src="../images/racecar.jpg" alt="CAD models of the racecar rear spaceframe and upper control arm" width="1912" height="648" /></div>
+      <figcaption><span class="mono">Fig. 1</span><span>Rear spaceframe and upper control arm CAD</span></figcaption>
+    </figure>
+
+    <div class="project-layout container">
+      <article class="prose">
+        <section id="geometry">
+          <h2><span class="mono">01</span>2D suspension geometry</h2>
+          <figure class="figure">
+            <div class="figure-frame"><img src="../images/racecar-2d.jpg" alt="2D suspension geometry layout" width="670" height="416" loading="lazy" /></div>
+            <figcaption><span class="mono">Fig. 2</span><span>Simplified 2D suspension model</span></figcaption>
+          </figure>
+          <p>This image represents a simplified 2D suspension model showing the tire, the upper and lower control arm interfaces to the rotor, chassis mounting locations, and shock positions. The model was used to simulate suspension behavior under bump and cornering conditions, allowing evaluation of how the control arms moved and responded throughout wheel travel.</p>
+          <ul>
+            <li>Developed the 2D suspension layout to define pickup point locations and overall wheel motion.</li>
+            <li>Used geometric analysis to study how suspension members moved through travel and how those changes affected system behavior.</li>
+            <li>Balanced packaging constraints with desired suspension kinematics.</li>
+            <li>Used the geometry as the foundation for later component and structural design decisions.</li>
+          </ul>
+        </section>
+        <section id="uca">
+          <h2><span class="mono">02</span>Upper control arm</h2>
+          <figure class="figure">
+            <div class="figure-frame"><img src="../images/racecar-uca.jpg" alt="Upper control arm CAD model" width="817" height="608" loading="lazy" /></div>
+            <figcaption><span class="mono">Fig. 3</span><span>Upper control arm</span></figcaption>
+          </figure>
+          <ul>
+            <li>Designed the upper control arm based on suspension geometry requirements and chassis interface points.</li>
+            <li>Considered load paths, member arrangement, stiffness, and manufacturability during the design process.</li>
+            <li>Modeled the component in CAD and refined the design to support fabrication and assembly.</li>
+            <li>Worked through the tradeoffs between strength, weight, and packaging within the suspension system.</li>
+          </ul>
+        </section>
+        <section id="rear-frame">
+          <h2><span class="mono">03</span>Rear frame</h2>
+          <figure class="figure">
+            <div class="figure-frame"><img src="../images/racecar-rear-frame-CAD.jpg" alt="Rear frame CAD model" width="1043" height="706" loading="lazy" /></div>
+            <figcaption><span class="mono">Fig. 4</span><span>Rear frame CAD model</span></figcaption>
+          </figure>
+          <figure class="figure">
+            <div class="figure-frame"><img src="../images/racecar-rear-frame.jpg" alt="Scaled brass-rod model of the rear frame built for torsional stiffness testing" width="1452" height="613" loading="lazy" /></div>
+            <figcaption><span class="mono">Fig. 5</span><span>Scaled model built for torsional stiffness testing</span></figcaption>
+          </figure>
+          <ul>
+            <li>Designed the rear frame structure to support suspension mounting, drivetrain packaging, and chassis stiffness requirements.</li>
+            <li>Performed FEA to evaluate stress distribution and structural stiffness under loading conditions.</li>
+            <li>Developed fabrication plans for the welded frame geometry and considered assembly accuracy during the design process.</li>
+            <li>Built and tested a scaled model to evaluate torsional stiffness and compare physical behavior with design expectations.</li>
+          </ul>
+        </section>
+        <section id="learned">
+          <h2><span class="mono">04</span>What I learned</h2>
+          <ul>
+            <li>How early suspension geometry decisions influence downstream component and structural design.</li>
+            <li>How to translate analytical layouts into real components that can be fabricated and assembled.</li>
+            <li>How to use simulation and physical testing together to evaluate structural performance.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="project-aside">
+        <div class="aside-block">
+          <h2>Tools &amp; methods</h2>
+          <ul class="chip-row">
+            <li class="chip">Suspension geometry</li>
+            <li class="chip">CAD</li>
+            <li class="chip">Control arm design</li>
+            <li class="chip">Welded frame design</li>
+            <li class="chip">FEA</li>
+            <li class="chip">Load-path analysis</li>
+            <li class="chip">Fabrication planning</li>
+            <li class="chip">Torsional stiffness testing</li>
+          </ul>
+        </div>
+
+        <nav class="aside-block toc-block" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol class="toc">
+            <li><a href="#geometry">2D suspension geometry</a></li>
+            <li><a href="#uca">Upper control arm</a></li>
+            <li><a href="#rear-frame">Rear frame</a></li>
+            <li><a href="#learned">What I learned</a></li>
+          </ol>
+        </nav>
+      </aside>
     </div>
 
-    <div class="project-section">
-  <h2>Rear Frame</h2>
+    <a class="next-project" href="macro-controller.html">
+      <div class="container next-inner">
+        <div>
+          <span class="label">Next project · 05</span>
+          <h2>Programmable Macro Controller</h2>
+        </div>
+        <span class="next-arrow" aria-hidden="true">→</span>
+      </div>
+    </a>
+  </main>
 
-  <div class="project-subimage-row">
-    <div class="project-subimage half">
-      <img src="../images/racecar-rear-frame-CAD.jpg" alt="Rear frame CAD model" />
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Kai Sims</p>
+      <div class="footer-links">
+        <a href="mailto:kaijpsims@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/kai-j-sims/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="../index.html#projects">All projects</a>
+      </div>
     </div>
+  </footer>
 
-    <div class="project-subimage half">
-      <img src="../images/racecar-rear-frame.jpg" alt="Rear frame fabricated structure, FEA, or test image" />
-    </div>
-  </div>
-
-  <ul>
-    <li>Designed the rear frame structure to support suspension mounting, drivetrain packaging, and chassis stiffness requirements.</li>
-    <li>Performed FEA to evaluate stress distribution and structural stiffness under loading conditions.</li>
-    <li>Developed fabrication plans for the welded frame geometry and considered assembly accuracy during the design process.</li>
-    <li>Built and tested a scaled model to evaluate torsional stiffness and compare physical behavior with design expectations.</li>
-  </ul>
-</div>
-
-    <div class="project-section">
-      <h2>What I learned</h2>
-      <ul>
-        <li>How early suspension geometry decisions influence downstream component and structural design.</li>
-        <li>How to translate analytical layouts into real components that can be fabricated and assembled.</li>
-        <li>How to use simulation and physical testing together to evaluate structural performance.</li>
-      </ul>
-    </div>
-
-    <div class="project-section">
-  <h2>Tools / Methods</h2>
-  <p>
-    Suspension geometry layout, CAD, upper control arm design, welded frame design, FEA, load-path analysis,
-    fabrication planning, and torsional stiffness testing.
-  </p>
-</div>
-  </div>
+  <script src="../main.js" defer></script>
 </body>
 </html>

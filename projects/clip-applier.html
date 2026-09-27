@@ -3,245 +3,272 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Endoscopic Clip Applier | Kai Sims</title>
+  <title>Endoscopic Clip Applier — Kai Sims</title>
+  <meta name="description" content="A robotically assisted multiload endoscopic clip applier designed to interface with Intuitive Surgical's da Vinci system." />
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0e0f11" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Endoscopic Clip Applier — Kai Sims" />
+  <meta property="og:description" content="A robotically assisted multiload endoscopic clip applier designed to interface with Intuitive Surgical's da Vinci system." />
+  <meta property="og:image" content="https://kai-sims.github.io/images/clip-applier.jpg" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
+  <script>
+    document.documentElement.classList.add("js");
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
 </head>
 <body>
-  <div class="container project-page narrow">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="top-links">
-      <a class="back-link" href="../index.html">← Back to portfolio</a>
-      <a
-        class="external-link-button"
-        href="https://sites.google.com/eng.ucsd.edu/mae156b-2025winter-team05/home"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visit Full Project Site ↗
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html" aria-label="Kai Sims, home">
+        <span class="brand-mark" aria-hidden="true">KS</span>
+        Kai Sims
       </a>
-    </div>
-    
-<div class="project-hero-image">
-  <img src="../images/clip-applier.jpg" alt="Endoscopic clip applier preview image" />
-</div>
-    
-    <h1>Endoscopic Clip Applier</h1>
-    <p class="meta">Design Lead | Berkeley, CA | 2024 – 2025</p>
 
-    <p>
-      I led the design and development of a robotically assisted multiload endoscopic clip
-      applier intended to interface with Intuitive Surgical’s Da Vinci system. The project
-      required precise mechanical actuation, constrained packaging, compact internal integration,
-      and repeated prototype iteration to achieve reliable clip loading and deployment.
-    </p>
+      <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#contact">Contact</a>
+        <a class="mobile-only" href="../resume.pdf" target="_blank" rel="noopener">Resume ↗</a>
+      </nav>
 
-    <div class="project-section">
-      <h2>Background</h2>
-      <p>
-        During cardiothoracic procedures such as heart and lung surgery, surgeons frequently
-        use robot-assisted systems like Intuitive Surgical’s Da Vinci Xi. This system uses
-        detachable robotic arms to provide precise motion control, allowing surgeons to operate
-        within the patient with a high degree of accuracy.
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h2>Problem Definition</h2>
-      <p>
-        During surgery, an endoscopic clip applier is used to limit blood flow in vessels.
-        In a conventional workflow, the applier is manually loaded with a clip in its jaws,
-        inserted into the body through a surgical port, and fired once positioned correctly.
-      </p>
-      <p>
-        After deployment, a surgical assistant must remove the instrument, manually attach
-        a new clip from a cartridge, and reinsert it through the port before the procedure
-        can continue. This process introduces inefficiency and becomes especially problematic
-        in time-sensitive situations such as internal bleeding.
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h2>Objective</h2>
-      <p>
-        The goal of this project was to design a robotically assisted multiload clip applier
-        that could integrate with the existing Da Vinci system used at UCSD Health. The device
-        needed to store multiple titanium clips while remaining straightforward and intuitive
-        in operation during surgical use.
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h2>Primary Requirements</h2>
-      <ul>
-        <li>Compatible with the existing Da Vinci system.</li>
-        <li>Automatic reloading within the patient.</li>
-        <li>Minimum clip capacity of three titanium clips.</li>
-      </ul>
-    </div>
-
-    <div class="project-section">
-      <h2>Secondary Requirements</h2>
-      <ul>
-        <li>Ideally fits through an 8 mm diameter shaft, with a maximum of 15 mm.</li>
-        <li>Uses biocompatible and steam-sterilizable materials.</li>
-      </ul>
-    </div>
-
-    <div class="project-section">
-      <h2>Final Design Overview</h2>
-      <p>
-        The multiload clip applier consists of seven key components: a clip cartridge, a clip
-        pusher plate, clip applier jaws, a jaw closer plate, a cable system, a clip cartridge holder,
-        and an outer shell. These components were compactly arranged within the shell to reduce
-        the risk of tissue pinching from moving internal parts.
-      </p>
-      <p>
-        The core mechanism uses a cable-driven system to align and actuate the two plates with
-        precise motion. When one side of the cable is pulled, a clip is advanced from the cartridge
-        into the jaws. Pulling the opposite side closes the jaws, firing and compressing the clip.
-        This cycle can then be repeated as needed during the procedure, reducing interruptions and
-        streamlining clip application.
-      </p>
-    </div>
-
-    <div class="project-section">
-      <h2>Device Components</h2>
-      <p>
-        The final device was organized around seven major components that work together to store,
-        align, transfer, and deploy titanium clips within a compact robotic surgical form factor.
-      </p>
-
-      <div class="component-grid">
-
-        <div class="component-card">
-          <h3>Clip Cartridge</h3>
-          <div class="component-image">
-            <img src="../images/clip-cartridge.jpg" alt="Clip cartridge component image" />
-          </div>
-          <p>
-            The clip cartridge serves as the storage and loading mechanism for multiple titanium clips.
-            It ensures that clips are aligned for transfer into the applier jaws. The clips are stacked
-            at a 45 degree angle within the cartridge, and as each clip is used, a spring-loaded
-            mechanism pushes the next clip into position for reloading. The cartridge also has an
-            extrusion on its back to secure the applier jaws in position so that they can be aligned
-            with the awaiting clip.
-          </p>
-        </div>
-
-        <div class="component-card">
-          <h3>Clip Pusher Plate</h3>
-          <div class="component-image">
-            <img src="../images/clip-pusher-plate.jpg" alt="Clip pusher plate component image" />
-          </div>
-          <p>
-            The pusher plate is responsible for transferring clips from the cartridge into the applier
-            jaws. The plate moves in a controlled linear motion, with the extended tab feeding into a
-            slit in the front of the cartridge to push a clip into the correct position.
-          </p>
-        </div>
-
-        <div class="component-card">
-          <h3>Clip Applier Jaws</h3>
-          <div class="component-image">
-            <img src="../images/clip-applier-jaws.jpg" alt="Clip applier jaws component image" />
-          </div>
-          <p>
-            The applier jaws are the functional ends of the device that hold and compress the titanium
-            clip around the target tissue. The inner surface of the jaws contains a groove to hold a
-            clip in position until ready for firing, with the ends being sloped to properly orient the
-            clip. The two jaws are separate, connected via a torsional spring to allow for the required
-            closing and opening motion needed.
-          </p>
-        </div>
-
-        <div class="component-card">
-          <h3>Jaw Closer Plate</h3>
-          <div class="component-image">
-            <img src="../images/jaw-closer-plate.jpg" alt="Jaw closer plate component image" />
-          </div>
-          <p>
-            The closer plate is responsible for actuating the clip applier jaws. When the plate moves
-            in a controlled linear motion, it compresses the jaws to fire a clip onto the targeted vessel.
-          </p>
-        </div>
-
-        <div class="component-card">
-          <h3>Cable System</h3>
-          <div class="component-image">
-            <img src="../images/cable-system.jpg" alt="Cable system component image" />
-          </div>
-          <p>
-            A cable is threaded through the holes present in both plates, enabling controlled movement
-            of the main mechanism in the assembly. When one side is pulled, the pusher plate moves up,
-            loading a clip into place, and when the other side is pulled, the closer plate moves up,
-            compressing the jaws to fire the clip.
-          </p>
-        </div>
-
-        <div class="component-card">
-          <h3>Clip Cartridge Holder</h3>
-          <div class="component-image">
-            <img src="../images/clip-cartridge-holder.jpg" alt="Clip cartridge holder component image" />
-          </div>
-          <p>
-            The cartridge holder anchors the clip cartridge to the outer shell, providing structural
-            rigidity to the inner assembly. Additionally, the upper extrusions act as supports for the
-            cable system, ensuring proper tension is maintained in the wire. The holder also connects
-            the clip applier to the da Vinci rod with the teeth on the bottom section, providing a
-            secure grip during surgical applications.
-          </p>
-        </div>
-
-        <div class="component-card component-card-wide">
-          <h3>Outer Shell</h3>
-          <div class="component-image">
-            <img src="../images/outer-shell.jpg" alt="Outer shell component image" />
-          </div>
-          <p>
-            The outer shell houses all internal components of the assembly, ensuring that no moving
-            parts come into contact with surrounding tissues. It is removable and reusable, allowing
-            multiple clip appliers to share the component.
-          </p>
-        </div>
-
+      <div class="nav-actions">
+        <button class="icon-button theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg>
+        </button>
+        <a class="button small primary" href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <button class="icon-button menu-toggle" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
       </div>
     </div>
+  </header>
 
-    <div class="project-section">
-      <h2>What I worked on</h2>
-      <ul>
-        <li>Led a team of four undergraduate engineers through concept development, CAD design, prototyping, and testing.</li>
-        <li>Designed custom machined parts and mechanical interfaces for the multiload clip deployment mechanism.</li>
-        <li>Managed tolerance stack-ups, packaging constraints, and alignment requirements for reliable actuation.</li>
-        <li>Coordinated prototype builds and used testing feedback to refine the design.</li>
-      </ul>
+  <main id="main">
+    <header class="project-header">
+      <div class="container">
+        <a class="breadcrumb" href="../index.html#projects"><span class="arrow">←</span> All projects</a>
+        <span class="label"><span class="accent">02</span>&ensp;Medical device · Mechanism design</span>
+        <h1>Endoscopic Clip Applier</h1>
+        <p class="project-lede">
+          I led the design and development of a robotically assisted multiload endoscopic clip applier intended to interface with Intuitive Surgical’s da Vinci system. The project required precise mechanical actuation, constrained packaging, compact internal integration, and repeated prototype iteration to achieve reliable clip loading and deployment.
+        </p>
+
+        <dl class="title-block">
+          <div>
+            <dt class="label">Role</dt>
+            <dd>Design Lead<span>Team of four engineers</span></dd>
+          </div>
+          <div>
+            <dt class="label">Timeline</dt>
+            <dd>Nov 2024 – Mar 2025</dd>
+          </div>
+          <div>
+            <dt class="label">Location</dt>
+            <dd>La Jolla, CA<span>UC San Diego</span></dd>
+          </div>
+          <div>
+            <dt class="label">Platform</dt>
+            <dd>da Vinci Xi</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <figure class="project-hero container figure">
+      <div class="figure-frame"><img src="../images/clip-applier.jpg" alt="Endoscopic clip applier prototype" width="1536" height="1024" /></div>
+      <figcaption><span class="mono">Fig. 1</span><span>Multiload clip applier prototype</span></figcaption>
+    </figure>
+
+    <div class="project-layout container">
+      <article class="prose">
+        <section id="background">
+          <h2><span class="mono">01</span>Background</h2>
+          <p>During cardiothoracic procedures such as heart and lung surgery, surgeons frequently use robot-assisted systems like Intuitive Surgical’s da Vinci Xi. This system uses detachable robotic arms to provide precise motion control, allowing surgeons to operate within the patient with a high degree of accuracy.</p>
+        </section>
+        <section id="problem">
+          <h2><span class="mono">02</span>Problem definition</h2>
+          <p>During surgery, an endoscopic clip applier is used to limit blood flow in vessels. In a conventional workflow, the applier is manually loaded with a clip in its jaws, inserted into the body through a surgical port, and fired once positioned correctly.</p>
+          <p>After deployment, a surgical assistant must remove the instrument, manually attach a new clip from a cartridge, and reinsert it through the port before the procedure can continue. This process introduces inefficiency and becomes especially problematic in time-sensitive situations such as internal bleeding.</p>
+        </section>
+        <section id="objective">
+          <h2><span class="mono">03</span>Objective</h2>
+          <p>The goal of this project was to design a robotically assisted multiload clip applier that could integrate with the existing da Vinci system used at UCSD Health. The device needed to store multiple titanium clips while remaining straightforward and intuitive in operation during surgical use.</p>
+        </section>
+        <section id="requirements">
+          <h2><span class="mono">04</span>Requirements</h2>
+          <dl class="spec-list">
+            <div><dt class="label">R1 · Primary</dt><dd>Compatible with the existing da Vinci system.</dd></div>
+            <div><dt class="label">R2 · Primary</dt><dd>Automatic reloading within the patient.</dd></div>
+            <div><dt class="label">R3 · Primary</dt><dd>Minimum clip capacity of three titanium clips.</dd></div>
+            <div><dt class="label">R4 · Secondary</dt><dd>Ideally fits through an 8 mm diameter shaft, with a maximum of 15 mm.</dd></div>
+            <div><dt class="label">R5 · Secondary</dt><dd>Uses biocompatible and steam-sterilizable materials.</dd></div>
+          </dl>
+        </section>
+        <section id="design">
+          <h2><span class="mono">05</span>Final design overview</h2>
+          <p>The multiload clip applier consists of seven key components: a clip cartridge, a clip pusher plate, clip applier jaws, a jaw closer plate, a cable system, a clip cartridge holder, and an outer shell. These components were compactly arranged within the shell to reduce the risk of tissue pinching from moving internal parts.</p>
+          <p>The core mechanism uses a cable-driven system to align and actuate the two plates with precise motion. When one side of the cable is pulled, a clip is advanced from the cartridge into the jaws. Pulling the opposite side closes the jaws, firing and compressing the clip. This cycle can then be repeated as needed during the procedure, reducing interruptions and streamlining clip application.</p>
+        </section>
+        <section id="components">
+          <h2><span class="mono">06</span>Device components</h2>
+          <p>The final device was organized around seven major components that work together to store, align, transfer, and deploy titanium clips within a compact robotic surgical form factor.</p>
+          <div class="component-grid">
+            <article class="component">
+              <div class="figure-frame"><img src="../images/clip-cartridge.jpg" alt="Clip Cartridge component" width="522" height="518" loading="lazy" /></div>
+              <div class="component-body">
+                <span class="label">Part 01</span>
+                <h3>Clip Cartridge</h3>
+                <p>The clip cartridge serves as the storage and loading mechanism for multiple titanium clips. It ensures that clips are aligned for transfer into the applier jaws. The clips are stacked at a 45 degree angle within the cartridge, and as each clip is used, a spring-loaded mechanism pushes the next clip into position for reloading. The cartridge also has an extrusion on its back to secure the applier jaws in position so that they can be aligned with the awaiting clip.</p>
+              </div>
+            </article>
+            <article class="component">
+              <div class="figure-frame"><img src="../images/clip-pusher-plate.jpg" alt="Clip Pusher Plate component" width="458" height="498" loading="lazy" /></div>
+              <div class="component-body">
+                <span class="label">Part 02</span>
+                <h3>Clip Pusher Plate</h3>
+                <p>The pusher plate is responsible for transferring clips from the cartridge into the applier jaws. The plate moves in a controlled linear motion, with the extended tab feeding into a slit in the front of the cartridge to push a clip into the correct position.</p>
+              </div>
+            </article>
+            <article class="component">
+              <div class="figure-frame"><img src="../images/clip-applier-jaws.jpg" alt="Clip Applier Jaws component" width="640" height="640" loading="lazy" /></div>
+              <div class="component-body">
+                <span class="label">Part 03</span>
+                <h3>Clip Applier Jaws</h3>
+                <p>The applier jaws are the functional ends of the device that hold and compress the titanium clip around the target tissue. The inner surface of the jaws contains a groove to hold a clip in position until ready for firing, with the ends being sloped to properly orient the clip. The two jaws are separate, connected via a torsional spring to allow for the required closing and opening motion needed.</p>
+              </div>
+            </article>
+            <article class="component">
+              <div class="figure-frame"><img src="../images/jaw-closer-plate.jpg" alt="Jaw Closer Plate component" width="397" height="429" loading="lazy" /></div>
+              <div class="component-body">
+                <span class="label">Part 04</span>
+                <h3>Jaw Closer Plate</h3>
+                <p>The closer plate is responsible for actuating the clip applier jaws. When the plate moves in a controlled linear motion, it compresses the jaws to fire a clip onto the targeted vessel.</p>
+              </div>
+            </article>
+            <article class="component">
+              <div class="figure-frame"><img src="../images/cable-system.jpg" alt="Cable System component" width="639" height="675" loading="lazy" /></div>
+              <div class="component-body">
+                <span class="label">Part 05</span>
+                <h3>Cable System</h3>
+                <p>A cable is threaded through the holes present in both plates, enabling controlled movement of the main mechanism in the assembly. When one side is pulled, the pusher plate moves up, loading a clip into place, and when the other side is pulled, the closer plate moves up, compressing the jaws to fire the clip.</p>
+              </div>
+            </article>
+            <article class="component">
+              <div class="figure-frame"><img src="../images/clip-cartridge-holder.jpg" alt="Clip Cartridge Holder component" width="359" height="527" loading="lazy" /></div>
+              <div class="component-body">
+                <span class="label">Part 06</span>
+                <h3>Clip Cartridge Holder</h3>
+                <p>The cartridge holder anchors the clip cartridge to the outer shell, providing structural rigidity to the inner assembly. Additionally, the upper extrusions act as supports for the cable system, ensuring proper tension is maintained in the wire. The holder also connects the clip applier to the da Vinci rod with the teeth on the bottom section, providing a secure grip during surgical applications.</p>
+              </div>
+            </article>
+            <article class="component wide">
+              <div class="figure-frame"><img src="../images/outer-shell.jpg" alt="Outer Shell component" width="437" height="554" loading="lazy" /></div>
+              <div class="component-body">
+                <span class="label">Part 07</span>
+                <h3>Outer Shell</h3>
+                <p>The outer shell houses all internal components of the assembly, ensuring that no moving parts come into contact with surrounding tissues. It is removable and reusable, allowing multiple clip appliers to share the component.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section id="work">
+          <h2><span class="mono">07</span>What I worked on</h2>
+          <ul>
+            <li>Led a team of four undergraduate engineers through concept development, CAD design, prototyping, and testing.</li>
+            <li>Designed custom machined parts and mechanical interfaces for the multiload clip deployment mechanism.</li>
+            <li>Managed tolerance stack-ups, packaging constraints, and alignment requirements for reliable actuation.</li>
+            <li>Coordinated prototype builds and used testing feedback to refine the design.</li>
+          </ul>
+        </section>
+        <section id="challenges">
+          <h2><span class="mono">08</span>Key engineering challenges</h2>
+          <ul>
+            <li>Packaging a functional multiload mechanism within a highly constrained robotic surgical form factor.</li>
+            <li>Maintaining smooth cable-driven motion and alignment across repeated loading and firing cycles.</li>
+            <li>Balancing compactness, manufacturability, and reliable clip deployment performance.</li>
+          </ul>
+        </section>
+        <section id="learned">
+          <h2><span class="mono">09</span>What I learned</h2>
+          <ul>
+            <li>How to lead a small engineering team through an end-to-end hardware design project.</li>
+            <li>How to refine mechanisms through structured prototyping and repeated testing.</li>
+            <li>How packaging, tolerance decisions, and internal interfaces directly affect system reliability.</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="project-aside">
+        <div class="aside-block">
+          <h2>Tools &amp; methods</h2>
+          <ul class="chip-row">
+            <li class="chip">CAD</li>
+            <li class="chip">Tolerance stack-ups</li>
+            <li class="chip">Mechanism design</li>
+            <li class="chip">Prototype fabrication</li>
+            <li class="chip">Cable-driven actuation</li>
+            <li class="chip">Iterative testing</li>
+            <li class="chip">Packaging analysis</li>
+            <li class="chip">Surgical device constraints</li>
+          </ul>
+        </div>
+
+        <div class="aside-block">
+          <h2>Links</h2>
+          <a class="button" href="https://sites.google.com/eng.ucsd.edu/mae156b-2025winter-team05/home" target="_blank" rel="noopener noreferrer">Full project site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+
+        <nav class="aside-block toc-block" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol class="toc">
+            <li><a href="#background">Background</a></li>
+            <li><a href="#problem">Problem definition</a></li>
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#design">Final design overview</a></li>
+            <li><a href="#components">Device components</a></li>
+            <li><a href="#work">What I worked on</a></li>
+            <li><a href="#challenges">Key engineering challenges</a></li>
+            <li><a href="#learned">What I learned</a></li>
+          </ol>
+        </nav>
+      </aside>
     </div>
 
-    <div class="project-section">
-      <h2>Key Engineering Challenges</h2>
-      <ul>
-        <li>Packaging a functional multiload mechanism within a highly constrained robotic surgical form factor.</li>
-        <li>Maintaining smooth cable-driven motion and alignment across repeated loading and firing cycles.</li>
-        <li>Balancing compactness, manufacturability, and reliable clip deployment performance.</li>
-      </ul>
-    </div>
+    <a class="next-project" href="coach-nova.html">
+      <div class="container next-inner">
+        <div>
+          <span class="label">Next project · 03</span>
+          <h2>Coach NOVA</h2>
+        </div>
+        <span class="next-arrow" aria-hidden="true">→</span>
+      </div>
+    </a>
+  </main>
 
-    <div class="project-section">
-      <h2>What I learned</h2>
-      <ul>
-        <li>How to lead a small engineering team through an end-to-end hardware design project.</li>
-        <li>How to refine mechanisms through structured prototyping and repeated testing.</li>
-        <li>How packaging, tolerance decisions, and internal interfaces directly affect system reliability.</li>
-      </ul>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year>2026</span> Kai Sims</p>
+      <div class="footer-links">
+        <a href="mailto:kaijpsims@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/kai-j-sims/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="../resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="../index.html#projects">All projects</a>
+      </div>
     </div>
+  </footer>
 
-    <div class="project-section">
-  <h2>Tools / Methods</h2>
-  <p>
-    CAD, tolerance stack-up analysis, mechanism design, prototype fabrication, cable-driven actuation,
-    iterative testing, packaging analysis, and surgical device design constraints.
-  </p>
-</div>
-  </div>
+  <script src="../main.js" defer></script>
 </body>
 </html>
